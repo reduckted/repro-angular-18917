@@ -1,8 +1,10 @@
-import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
+import { ApplicationConfig, ErrorHandler } from '@angular/core';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { CustomErrorHandler } from './custom-error-handler.service';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
+    providers: [
+        provideAnimations(),
+        { provide: ErrorHandler, useExisting: CustomErrorHandler }
+    ]
 };

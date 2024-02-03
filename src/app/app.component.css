@@ -1,0 +1,13 @@
+.repros {
+    display: grid;
+    grid-template: 300px 300px / repeat(3, 1fr);
+    gap: 1em;
+}
+
+.errors {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    gap: 1em;
+    font-family: monospace;
+}
